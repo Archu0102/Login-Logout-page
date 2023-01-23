@@ -1,8 +1,10 @@
 import './NavbarStyle.css'
-import React from 'react'
-import {FaFacebookSquare, FaInstagramSquare, FaLinkedinIn} from 'react-icons/fa'
+import React, { useState } from 'react'
+import {FaFacebookSquare, FaInstagramSquare, FaLinkedinIn, FaBars} from 'react-icons/fa'
+// import { GiHamburgerMenu} from 'react-icons/fa';
 
 const Navbar = () => {
+  const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
     <>
       <nav className='main-nav'>
@@ -13,7 +15,7 @@ const Navbar = () => {
           </h2>
         </div>
 
-          <div className='menu-link'>
+          <div className= {showMediaIcons ? 'menu-link' : 'menu-link'} >
             <ul>
               <li>
                 <a href='/'>Home</a>
@@ -30,21 +32,24 @@ const Navbar = () => {
           <div className='social-media'>
             <ul className='social-media-desctop'>
               <li>
-                <a href='#'><FaFacebookSquare/></a>
+                <a className='facebook' href='#'><FaFacebookSquare /></a>
               </li>
               <li>
-                <a href='#'><FaInstagramSquare/></a>
+                <a className='instagram' href='#'><FaInstagramSquare/></a>
               </li>
               <li>
-                <a href='#'><FaLinkedinIn/></a>
+                <a href='#'><FaLinkedinIn size={25} style = {{color: "blue"}} /></a>
               </li>
             </ul>
+              <div className='hamburger-menu'>
+                <a href='#' onClick={() => setShowMediaIcons(!showMediaIcons)}><FaBars size={25} style={{color: "black"}}/></a>
+              </div>
           </div>
       </nav>
-        <section>
+        <div className='welcom'>
           <p>Welcom to</p>
           <h2>Archana's Website</h2>
-        </section>
+        </div>
     </>
   )
 }
