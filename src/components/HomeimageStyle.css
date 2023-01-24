@@ -1,0 +1,16 @@
+.welcom{
+    text-align: center;
+    margin-top: 18rem;
+}
+
+.welcom p{
+    font-size: 3rem;
+    text-shadow: 2px 2px 3px blue;
+    align-items: center;
+}
+
+.welcom h2{
+    font-size: 5rem;
+    text-shadow: 3px 3px 3px blue;
+    align-items: center;
+}

@@ -46,10 +46,7 @@ const Navbar = () => {
               </div>
           </div>
       </nav>
-        <div className='welcom'>
-          <p>Welcom to</p>
-          <h2>Archana's Website</h2>
-        </div>
+        
     </>
   )
 }
