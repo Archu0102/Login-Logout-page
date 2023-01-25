@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from '../components/Form';
+import Form from '../components/LogoutForm';
 import Navbar from '../components/Navbar';
 
 const Logoutpage = () => {
